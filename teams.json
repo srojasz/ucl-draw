@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Man City",
+    "group": "A",
+    "country": "UK"
+  },
+  {
+    "name": "PSG",
+    "group": "A",
+    "country": "FR"
+  },
+  {
+    "name": "Liverpool",
+    "group": "B",
+    "country": "UK"
+  },
+  {
+    "name": "Atlético Madrid",
+    "group": "B",
+    "country": "ES"
+  },
+  {
+    "name": "Ajax",
+    "group": "C",
+    "country": "NL"
+  },
+  {
+    "name": "Sporting",
+    "group": "C",
+    "country": "PT"
+  },
+  {
+    "name": "Real Madrid",
+    "group": "D",
+    "country": "ES"
+  },
+  {
+    "name": "Inter",
+    "group": "D",
+    "country": "IT"
+  },
+  {
+    "name": "Bayern",
+    "group": "E",
+    "country": "DE"
+  },
+  {
+    "name": "Benfica",
+    "group": "E",
+    "country": "PT"
+  },
+  {
+    "name": "Man United",
+    "group": "F",
+    "country": "UK"
+  },
+  {
+    "name": "Villareal",
+    "group": "F",
+    "country": "ES"
+  },
+  {
+    "name": "LOSC Lille",
+    "group": "G",
+    "country": "FR"
+  },
+  {
+    "name": "RB Salzburg",
+    "group": "G",
+    "country": "DE"
+  },
+  {
+    "name": "Juventus",
+    "group": "H",
+    "country": "IT"
+  },
+  {
+    "name": "Chelsea",
+    "group": "H",
+    "country": "UK"
+  }
+]
