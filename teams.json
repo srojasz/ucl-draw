@@ -1,80 +1,96 @@
 [
   {
+    "id": 1,
     "name": "Man City",
     "group": "A",
     "country": "UK"
   },
   {
+    "id": 2,
     "name": "PSG",
     "group": "A",
     "country": "FR"
   },
   {
+    "id": 3,
     "name": "Liverpool",
     "group": "B",
     "country": "UK"
   },
   {
+    "id": 4,
     "name": "Atlético Madrid",
     "group": "B",
     "country": "ES"
   },
   {
+    "id": 5,
     "name": "Ajax",
     "group": "C",
     "country": "NL"
   },
   {
+    "id": 6,
     "name": "Sporting",
     "group": "C",
     "country": "PT"
   },
   {
+    "id": 7,
     "name": "Real Madrid",
     "group": "D",
     "country": "ES"
   },
   {
+    "id": 8,
     "name": "Inter",
     "group": "D",
     "country": "IT"
   },
   {
+    "id": 9,
     "name": "Bayern",
     "group": "E",
     "country": "DE"
   },
   {
+    "id": 10,
     "name": "Benfica",
     "group": "E",
     "country": "PT"
   },
   {
+    "id": 11,
     "name": "Man United",
     "group": "F",
     "country": "UK"
   },
   {
+    "id": 12,
     "name": "Villareal",
     "group": "F",
     "country": "ES"
   },
   {
+    "id": 13,
     "name": "LOSC Lille",
     "group": "G",
     "country": "FR"
   },
   {
+    "id": 14,
     "name": "RB Salzburg",
     "group": "G",
     "country": "DE"
   },
   {
+    "id": 15,
     "name": "Juventus",
     "group": "H",
     "country": "IT"
   },
   {
+    "id": 16,
     "name": "Chelsea",
     "group": "H",
     "country": "UK"

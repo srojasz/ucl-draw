@@ -3,16 +3,19 @@ import { getTwoRandomTeams } from "./businessLogic";
 describe("Get two random teams function", () => {
     const teams = [
         {
+            id: 1,
             name: "Man City",
             group: "A",
             country: "UK"
         },
         {
+            id: 2,
             name: "PSG",
             group: "A",
             country: "FR"
         },
         {
+            id: 3,
             name: "Liverpool",
             group: "B",
             country: "UK"
@@ -32,16 +35,19 @@ describe("Get two random teams function", () => {
   it("it should give us an empty arrat when all teams has the same group", () => {
     const fakeTeams = [
       {
+        id: 1,
         name: "Man City",
         group: "A",
         country: "UK"
       },
       {
+        id: 2,
         name: "PSG",
         group: "A",
         country: "FR"
       },
       {
+        id: 3,
         name: "Liverpool",
         group: "A",
         country: "UK"
@@ -53,16 +59,19 @@ describe("Get two random teams function", () => {
   it("it should give us an empty arrat when all teams has the same country", () => {
     const fakeTeams = [
       {
+        id: 1,
         name: "Man City",
         group: "C",
         country: "UK"
       },
       {
+        id: 2,
         name: "PSG",
         group: "A",
         country: "UK"
       },
       {
+        id: 3,
         name: "Liverpool",
         group: "A",
         country: "UK"
@@ -71,19 +80,22 @@ describe("Get two random teams function", () => {
 
     expect(getTwoRandomTeams(fakeTeams)).toStrictEqual([]);
   });
-  it("it should give us an empty arrat when all teams has the same name", () => {
+  it("it should give us an empty arrat when all teams has the same id", () => {
     const fakeTeams = [
       {
+        id: 1,
         name: "Man City",
         group: "A",
         country: "UK"
       },
       {
+        id: 1,
         name: "Man City",
         group: "A",
         country: "FR"
       },
       {
+        id: 1,
         name: "Man City",
         group: "A",
         country: "UK"
