@@ -2,13 +2,14 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react';
-import Team from '../interfaces/Team.interface';
+import Team from '../domain/interfaces/Team.interface';
+import Stage from '../domain/Stage.enum';
 import styles from '../styles/Home.module.css'
 import teamsData from '../teams.json';
-import { getTwoRivals } from '../utils/businessLogic';
+import { getTwoRivalsByStage } from '../utils/businessLogic';
 
 const Home: NextPage = () => {
-  const [ availableTeams, setAvailableTeams ] = useState<Team[]>(teamsData);
+  const [ availableTeams, setAvailableTeams ] = useState<Team[]>(teamsData as Team[]);
   const [ currentMatch, setCurrentMatch ] = useState<Team[]>([]);
   const [ allRivalsPairing, setAllRivalsPairing ] = useState<Team[][]>([]);
 
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
   } 
   
   const getNewTeamsMatching = () => {
-    const twoRivals = getTwoRivals(availableTeams);
+    const twoRivals = getTwoRivalsByStage(availableTeams, Stage.ROUND_OF_16);
     setCurrentMatch(twoRivals);
     setAllRivalsPairing ([
       ...allRivalsPairing,

@@ -1,42 +1,43 @@
-import { getTwoRivals } from "./businessLogic";
+import Team from "../domain/interfaces/Team.interface";
+import Stage from "../domain/Stage.enum";
+import { getTwoRivalsByStage } from "./businessLogic";
 
 describe("Get two random teams function", () => {
-    const teams = [
+    const teams: Team[] = [
         {
             id: 1,
             name: "Man City",
             group: "A",
-            position: 1,
+            position: 2,
             country: "UK"
         },
         {
             id: 2,
             name: "PSG",
             group: "A",
-            position: 2,
+            position: 1,
             country: "FR"
         },
         {
             id: 3,
             name: "Liverpool",
             group: "B",
-            position: 3,
+            position: 2,
             country: "UK"
         },
     ];
-
   
   it("it should not give us two teams that has the same country", () => {
-    expect(getTwoRivals(teams)).not.toBe([teams[0], teams[2]]);
+    expect(getTwoRivalsByStage(teams, Stage.ROUND_OF_16)).not.toBe([teams[0], teams[2]]);
   });
   it("it should not give us two teams that has the same group", () => {
-    expect(getTwoRivals(teams)).not.toBe([teams[0], teams[1]]);    
+    expect(getTwoRivalsByStage(teams, Stage.ROUND_OF_16)).not.toBe([teams[0], teams[1]]);    
   });
   it("it should not give us two teams that has the same group", () => {
-    expect(getTwoRivals(teams)).not.toBe([]);    
+    expect(getTwoRivalsByStage(teams, Stage.ROUND_OF_16)).not.toBe([]);    
   });
   it("it should give us an empty arrat when all teams has the same group", () => {
-    const fakeTeams = [
+    const fakeTeams: Team[] = [
       {
         id: 1,
         name: "Man City",
@@ -55,15 +56,15 @@ describe("Get two random teams function", () => {
         id: 3,
         name: "Liverpool",
         group: "A",
-        position: 3,
+        position: 2,
         country: "UK"
       },
     ]
 
-    expect(getTwoRivals(fakeTeams)).toStrictEqual([]);
+    expect(getTwoRivalsByStage(fakeTeams, Stage.ROUND_OF_16)).toStrictEqual([]);
   });
   it("it should give us an empty arrat when all teams has the same country", () => {
-    const fakeTeams = [
+    const fakeTeams: Team[] = [
       {
         id: 1,
         name: "Man City",
@@ -82,15 +83,15 @@ describe("Get two random teams function", () => {
         id: 3,
         name: "Liverpool",
         group: "A",
-        position: 3,
+        position: 2,
         country: "UK"
       },
     ]
 
-    expect(getTwoRivals(fakeTeams)).toStrictEqual([]);
+    expect(getTwoRivalsByStage(fakeTeams, Stage.ROUND_OF_16)).toStrictEqual([]);
   });
   it("it should give us an empty arrat when all teams has the same id", () => {
-    const fakeTeams = [
+    const fakeTeams: Team[] = [
       {
         id: 1,
         name: "Man City",
@@ -109,15 +110,15 @@ describe("Get two random teams function", () => {
         id: 1,
         name: "Man City",
         group: "A",
-        position: 3,
+        position: 1,
         country: "UK"
       },
     ]
 
-    expect(getTwoRivals(fakeTeams)).toStrictEqual([]);
+    expect(getTwoRivalsByStage(fakeTeams, Stage.ROUND_OF_16)).toStrictEqual([]);
   });
   it("it should give us an empty arrat when all teams has the same id", () => {
-    const fakeTeams = [
+    const fakeTeams: Team[] = [
       {
         id: 1,
         name: "Man City",
@@ -141,6 +142,6 @@ describe("Get two random teams function", () => {
       },
     ]
 
-    expect(getTwoRivals(fakeTeams)).toStrictEqual([]);
+    expect(getTwoRivalsByStage(fakeTeams, Stage.ROUND_OF_16)).toStrictEqual([]);
   });
 });
